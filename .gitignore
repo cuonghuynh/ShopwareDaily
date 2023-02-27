@@ -1,0 +1,11 @@
+_site
+.cache
+node_modules
+.sass-cache
+.eslintcache
+src/_drafts
+.env
+.log
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,25 @@
+@import "./partials/functions";
+@import "partials/tokens/spacing";
+@import "partials/tokens/typography";
+@import "partials/global/reset";
+@import "partials/utils/stack";
+@import "partials/utils/gap";
+@import "partials/utils/fontSize";
+
+body {
+  @include font($family: "body", $weight: "regular");
+}
+
+main {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: spacing("0");
+  height: 100%;
+  background-color: black;
+  padding: 0 spacing("2");
+
+  * {
+    color: white;
+  }
+}

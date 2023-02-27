@@ -1,0 +1,12 @@
+@import "../mixins";
+
+.footnotes {
+  &__list {
+    list-style: decimal;
+  }
+}
+
+[role="doc-noteref"]::after {
+  counter-increment: footnotes;
+  content: " [" counter(footnotes) "]";
+}

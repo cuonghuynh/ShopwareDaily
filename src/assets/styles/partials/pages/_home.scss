@@ -1,0 +1,34 @@
+@import "../tokens";
+@import "../functions";
+@import "../mixins";
+
+.home-page {
+  gap: spacing("8");
+
+  @include mobile-lg {
+    gap: spacing("10");
+  }
+}
+
+.home-page-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: spacing("5");
+}
+
+.hero-hashart {
+  display: none;
+
+  @include desktop-lg {
+    display: flex;
+  }
+}
+
+.hash-art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(#{spacing("5")}, #{spacing("9")}));
+
+  > * {
+    aspect-ratio: 1;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../functions";
+@import "../mixins";
+
+.page-footer {
+  @include theme-light {
+    --color-footer-bg: var(--color-surface-9);
+  }
+
+  @include theme-dark {
+    --color-footer-bg: var(--color-surface-2);
+  }
+
+  background-color: var(--color-footer-bg);
+  color: white;
+  text-align: center;
+  padding-top: spacing("5");
+  padding-bottom: spacing("11");
+
+  &-container {
+    --gap: #{spacing("0")};
+  }
+
+  &-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: spacing("0");
+  }
+
+  @include mobile-lg {
+    padding-block: spacing("5");
+  }
+
+  @include tablet {
+    text-align: start;
+
+    &-socials {
+      justify-content: flex-end;
+    }
+  }
+
+  h2,
+  a {
+    color: inherit;
+  }
+}

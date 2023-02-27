@@ -1,0 +1,110 @@
+/* stylelint-disable value-keyword-case */
+$tokens: (
+  leading: (
+    steps: (
+      "4xs": 1,
+      "3xs": 1.2,
+      "2xs": 1.3,
+      "xs": 1.4,
+      "sm": 1.5,
+      "base": 1.6,
+      "md": 1.7,
+      "lg": 1.8,
+    ),
+    customPropertyPrefix: "lh",
+  ),
+  fontSize: (
+    steps: (
+      "xs": (
+        min: 12px,
+        max: 16px,
+      ),
+      "sm": (
+        min: 14px,
+        max: 18px,
+      ),
+      "base": (
+        min: 16px,
+        max: 20px,
+        leading: "base",
+      ),
+      "md": (
+        min: 18px,
+        max: 23px,
+        leading: "sm",
+      ),
+      "lg": (
+        min: 20px,
+        max: 26px,
+        leading: "xs",
+      ),
+      "xl": (
+        min: 22px,
+        max: 32px,
+        leading: "2xs",
+      ),
+      "2xl": (
+        min: 26px,
+        max: 36px,
+        leading: "2xs",
+      ),
+      "3xl": (
+        min: 30px,
+        max: 44px,
+        leading: "3xs",
+        letterSpacing: "sm",
+      ),
+      "4xl": (
+        min: 40px,
+        max: 76px,
+        leading: "4xs",
+        letterSpacing: "xs",
+      ),
+    ),
+    breakpoints: (
+      min: "mobile-min",
+      max: "desktop",
+    ),
+    customPropertyPrefix: "fs",
+  ),
+  letterSpacing: (
+    steps: (
+      "xs": -0.5px,
+      "sm": -0.25px,
+      "md": 0.25px,
+      "lg": 1px,
+    ),
+    customPropertyPrefix: "ls",
+  ),
+  spacing: (
+    steps: (
+      "-4": 2px,
+      "-3": 4px,
+      "-2": 8px,
+      "-1": 12px,
+      "0": 16px,
+      "1": 18px,
+      "2": 20px,
+      "3": 24px,
+      "4": 28px,
+      "5": 32px,
+      "6": 36px,
+      "7": 40px,
+      "8": 48px,
+      "9": 56px,
+      "10": 64px,
+      "11": 76px,
+      "12": 96px,
+    ),
+    customPropertyPrefix: "sp",
+  ),
+  breakpoints: (
+    "mobile-min": 360px,
+    "mobile": 400px,
+    "mobile-lg": 480px,
+    "tablet-sm": 768px,
+    "tablet": 896px,
+    "desktop": 960px,
+    "desktop-lg": 1200px,
+  ),
+);

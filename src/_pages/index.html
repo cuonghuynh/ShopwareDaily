@@ -1,0 +1,57 @@
+---
+permalink: /
+---
+
+<article class="home-page stack">
+  <section class="home-page-hero">
+    <article class="post-preview">
+      <div class="post-preview-date"><span class="screen-reader-only">Published on </span><time
+          datetime="2023-02-05">February 05, 2023</time></div>
+      <h3 class="post-preview-title">
+        <a class="post-preview-link to-underline" href="/blog/react-context-nested-components/">Detecting Nested Components
+          in React with the Context API</a>
+      </h3>
+      <p class="post-preview-description">The React Context API is normally used to avoid prop drilling. But it can also be
+        used to detect if a component is nested within another instance of itself or as a child of a particular component.
+      </p>
+      <ul class="post-preview-tags" aria-label="Tags">
+        <li>
+          <a href="/tags/react/" class="post-preview-tag post-tag" aria-label="react">react</a>
+        </li>
+        <li>
+          <a href="/tags/html/" class="post-preview-tag post-tag" aria-label="html">html</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section class="stack gap-0">
+    <h2 id="recent-posts">Recent Posts</h2>
+    {%- assign recentPosts = collections.posts | limit: 6 -%}
+    {%- include "postPreviews.html" posts: recentPosts, titleLevel: 3 -%}
+  </section>
+  <section class="stack gap-0">
+    <h2 id="featured-posts">Featured Posts</h2>
+    {%- assign featuredPosts = collections.posts | where: "data.isFeatured", true -%}
+    {%- include "postPreviews.html" posts: featuredPosts, titleLevel: 3 -%}
+  </section>
+  <section class="stack gap-0">
+    <h2 id="featured-posts">Community Links</h2>
+    {%- assign featuredPosts = collections.posts | where: "data.isFeatured", true -%}
+    {%- include "postPreviews.html" posts: featuredPosts, titleLevel: 3 -%}
+  </section>
+</article>
+{%- assign networks = socials | entries -%}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "image": "{{ openGraph.image }}",
+  "jobTitle": "Software Developer",
+  "name": "{{ site.author }}",
+  "sameAs": [
+    {%- for network in networks %}
+      "{{ network[1].url }}"{%- if forloop.last == false -%},{%- endif -%}
+    {% endfor %}
+  ]
+}
+</script>

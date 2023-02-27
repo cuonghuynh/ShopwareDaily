@@ -1,0 +1,38 @@
+@use "sass:math";
+
+@import "../functions";
+@import "../mixins";
+@import "../tokens";
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-1);
+  color: var(--color-text-normal);
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  @include font($size: "base");
+}
+
+#page-content {
+  flex-grow: 1;
+  padding-block-start: clamped(get($tokens, "spacing", "steps", "5"), get($tokens, "spacing", "steps", "12"));
+  padding-block-end: clamped(get($tokens, "spacing", "steps", "10"), get($tokens, "spacing", "steps", "12"));
+}
+
+:is(code, kbd) {
+  font-size: 0.82em;
+  @include font($family: "mono", $weight: "medium");
+
+  :is(strong, h1, h2, h3, h4, h5, h6) & {
+    @include font($family: "mono", $weight: "bold");
+  }
+}
+
+:is(a, h1, h2, h3, h4, h5, h6, label, th, strong) {
+  color: var(--color-text-emphasis);
+}
+
+:is(h1, h2, h3, h4, h5, h6, label, th, strong) {
+  @include font($family: "body", $weight: "bold");
+}

@@ -1,0 +1,83 @@
+@import "../functions";
+@import "../mixins";
+
+.project {
+  &-wrapper {
+    --container-width: 50rem;
+
+    // Prevents the dreaded "doom flicker": https://www.joshwcomeau.com/animation/css-transitions/#doom-flicker
+    &:is(:hover, :focus-within) {
+      .project {
+        box-shadow: var(--card-box-shadow-focus);
+        transform: var(--card-offset-y-focus);
+      }
+    }
+  }
+
+  &-name {
+    line-height: normal;
+  }
+
+  &-icon {
+    picture {
+      display: flex;
+      width: 1.2em;
+      aspect-ratio: 1;
+    }
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: spacing("-4");
+
+    svg {
+      width: 1em;
+      aspect-ratio: 1;
+      fill: var(--color-surface-8);
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+
+    &:is(:focus, :focus-visible) {
+      outline: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &-description {
+    margin-top: spacing("-2");
+    @include font($size: "sm", $line-height: "sm");
+  }
+
+  &-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: spacing("-2");
+    margin-top: spacing("1");
+  }
+
+  &-technology {
+    background-color: var(--color-surface-3);
+    padding: spacing("-3") spacing("-1");
+    border-radius: spacing("-4");
+  }
+}
+
+.github-cta {
+  svg {
+    width: spacing("8");
+    aspect-ratio: 1;
+    fill: currentcolor;
+  }
+}

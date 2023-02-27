@@ -1,0 +1,35 @@
+<header class="navbar">
+  <div class="navbar-container container">
+    <nav aria-label="Primary">
+      <a href="#page-content" class="screen-reader-only skip-navigation">Skip to content</a>
+      <a class="navbar-branding outline-offset" href="/" aria-label="Home page" {% if permalink == "/" %}aria-current="page"{% endif %}>
+        <img src="/assets/images/favicons/favicon-128.png" class="navbar-logo" alt="" width="28" height="28">
+        <span>Shopware Daily</span>
+      </a>
+      <ul class="navbar-links">
+        {%- comment -%}Only show this home link on mobile view.{%- endcomment -%}
+        <li class="navbar-item home">
+          <a class="navbar-link" href="/" {% if permalink == "/" %}aria-current="page"{% endif %}>Home</a>
+        </li>
+        {%- assign navLinks = "Blog,Deep Dive,Links,Resources" | split: ',' -%}
+        {%- for link in navLinks -%}
+        <li class="navbar-item">
+          {%- assign href = link | downcase | prepend: "/" | append: "/" -%}
+          <a
+            class="navbar-link"
+            href="{{ href }}"
+            {% if permalink == href -%}
+            aria-current="page"
+            {%- endif -%}
+            {% if link == 'Blog' and isBlogPage -%}
+            aria-current="page"
+            {%- endif -%}
+          >
+            {{- link -}}
+          </a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
+</header>

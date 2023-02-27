@@ -1,0 +1,16 @@
+@import "../functions";
+@import "../mixins";
+
+.button {
+  --outline-offset: var(--outline-thickness);
+  --outline-color: var(--color-surface-9);
+  background-color: var(--color-surface-9);
+  color: var(--color-text-inverted);
+  padding: spacing("-2") spacing("0");
+  border-radius: spacing("-4");
+  text-decoration: none;
+
+  &:is(:focus, :hover) {
+    background-color: var(--color-surface-7);
+  }
+}

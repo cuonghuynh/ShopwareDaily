@@ -1,0 +1,69 @@
+@use "sass:math";
+
+@import "../mixins";
+
+.comment-actions {
+  margin-top: spacing("5");
+}
+
+.comment-button {
+  display: flex;
+  align-items: center;
+  gap: spacing("-2");
+}
+
+.post-comment {
+  --avatar-size: #{spacing("5")};
+  --meta-spacing: #{spacing("-2")};
+
+  &-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: spacing("-2");
+  }
+
+  &-avatar {
+    align-self: flex-start;
+    width: var(--avatar-size);
+  }
+
+  &-username {
+    @include font($family: "body", $weight: "bold");
+  }
+
+  &-edited {
+    font-style: italic;
+  }
+
+  &-author {
+    border-radius: spacing("-4");
+    padding: spacing("-3") spacing("-2");
+  }
+
+  &-body {
+    ul {
+      list-style: disc;
+    }
+
+    @include headings {
+      @include font($size: "base");
+    }
+  }
+
+  @include tablet {
+    & {
+      padding-inline-start: calc(var(--avatar-size) + var(--meta-spacing));
+    }
+
+    &-meta {
+      position: relative;
+    }
+
+    &-avatar {
+      position: absolute;
+      transform: translateX(-100%);
+      left: calc(-1 * var(--meta-spacing));
+    }
+  }
+}
