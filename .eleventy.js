@@ -40,6 +40,7 @@ const { codeDemoOptions } = require('./config/plugins/codeDemo');
 const { dir, imagePaths, scriptDirs } = require('./config/constants');
 const { slugifyString } = require('./config/utils');
 const { escape } = require('lodash');
+const inspect = require('util').inspect;
 
 const TEMPLATE_ENGINE = 'liquid';
 
@@ -92,6 +93,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('entries', Object.entries);
   eleventyConfig.addFilter('pathParse', pathParse);
   eleventyConfig.addFilter('pathJoin', pathJoin);
+  eleventyConfig.addFilter('debug', (content) => `<pre>${inspect(content)}</pre>`);
 
   // Custom collections
   eleventyConfig.addCollection('posts', getAllPosts);

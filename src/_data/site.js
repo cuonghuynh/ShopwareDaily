@@ -12,12 +12,12 @@ module.exports = {
   title: 'Shopware Daily',
   author: 'Shopware Daily',
   email: 'cuongdev@hotmail.com',
-  description: 'Dev tutorials, thoughts on software development, and the occasional off-topic post.',
+  description: 'Every day bringing you the latest news, tutorials, and packages for the Shopware 6.',
   keywords: ['Shopware Daily', 'Shopware 6', 'Symfony', 'PHP', 'VueJs', 'Docker'],
   lang: 'en-US',
   issues: {
-    owner: `AleksandrHovhannisyan`,
-    repo: `aleksandrhovhannisyan.com`,
+    owner: `cuonghuynh`,
+    repo: `shopwaredaily.com`,
   },
   pagination: {
     itemsPerPage: 21,

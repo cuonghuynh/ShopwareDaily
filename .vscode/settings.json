@@ -20,4 +20,7 @@
     "endcode",
     "mouseleave"
   ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/cuonghuynh/dev/shopwaredaily/.github/workflows/deploy.yml"
+  },
 }

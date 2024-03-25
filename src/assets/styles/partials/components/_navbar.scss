@@ -10,8 +10,8 @@
 
 .navbar {
   @include theme-light {
-    --color-navbar-bg: var(--color-surface-9);
-    --color-navbar-bg-focus: var(--color-surface-8);
+    --color-navbar-bg: var(--color-surface-1);
+    --color-navbar-bg-focus: var(--color-surface-2);
     --shadow-navbar: none;
   }
 
@@ -30,10 +30,11 @@
   width: 100%;
   padding-block: spacing("-1");
   background-color: var(--color-navbar-bg);
+  border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-navbar);
   overflow-x: auto;
   // Shared typography styles for all navbar text
-  color: white;
+  color: var(--color-mid-text);
   @include font($size: "sm");
 
   a {
@@ -68,6 +69,10 @@
   &-branding {
     display: none;
     @include font($family: "body", $weight: "bold");
+
+    span {
+      color: #179fff;
+    }
   }
 
   &-links {
@@ -85,7 +90,7 @@
     width: 100%;
 
     &:is([aria-current="page"], :hover, :focus) {
-      background-color: var(--color-navbar-bg-focus);
+      text-decoration: underline;
     }
   }
 }

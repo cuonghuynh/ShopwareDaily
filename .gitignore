@@ -9,3 +9,5 @@ src/_drafts
 
 # Local Netlify folder
 .netlify
+
+**/.DS_Store

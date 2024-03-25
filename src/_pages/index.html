@@ -6,38 +6,23 @@ permalink: /
   <section class="home-page-hero">
     <article class="post-preview">
       <div class="post-preview-date"><span class="screen-reader-only">Published on </span><time
-          datetime="2023-02-05">February 05, 2023</time></div>
+          datetime="2023-02-05">Mar 25, 2024</time></div>
       <h3 class="post-preview-title">
-        <a class="post-preview-link to-underline" href="/blog/react-context-nested-components/">Detecting Nested Components
-          in React with the Context API</a>
+        <a class="post-preview-link to-underline" href="/blog/shopware-6-search-customization/">Shopware 6 Search Customization</a>
       </h3>
-      <p class="post-preview-description">The React Context API is normally used to avoid prop drilling. But it can also be
-        used to detect if a component is nested within another instance of itself or as a child of a particular component.
+      <p class="post-preview-description">This post dives into the basics of search customization, helping you understand keywords, search behavior, and how to
+      optimize results for a smoother shopping experience for your customers.
       </p>
       <ul class="post-preview-tags" aria-label="Tags">
         <li>
-          <a href="/tags/react/" class="post-preview-tag post-tag" aria-label="react">react</a>
-        </li>
-        <li>
-          <a href="/tags/html/" class="post-preview-tag post-tag" aria-label="html">html</a>
+          <a href="/tags/shopware6/" class="post-preview-tag post-tag" aria-label="news">shopware6</a>
         </li>
       </ul>
     </article>
   </section>
   <section class="stack gap-0">
-    <h2 id="recent-posts">Recent Posts</h2>
     {%- assign recentPosts = collections.posts | limit: 6 -%}
     {%- include "postPreviews.html" posts: recentPosts, titleLevel: 3 -%}
-  </section>
-  <section class="stack gap-0">
-    <h2 id="featured-posts">Featured Posts</h2>
-    {%- assign featuredPosts = collections.posts | where: "data.isFeatured", true -%}
-    {%- include "postPreviews.html" posts: featuredPosts, titleLevel: 3 -%}
-  </section>
-  <section class="stack gap-0">
-    <h2 id="featured-posts">Community Links</h2>
-    {%- assign featuredPosts = collections.posts | where: "data.isFeatured", true -%}
-    {%- include "postPreviews.html" posts: featuredPosts, titleLevel: 3 -%}
   </section>
 </article>
 {%- assign networks = socials | entries -%}

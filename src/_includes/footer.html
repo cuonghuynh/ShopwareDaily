@@ -1,28 +1,7 @@
 <footer class="page-footer">
   <div class="page-footer-container container col-wrap align-center">
     <div class="stack gap--2">
-      <p class="fs-sm">&copy; {{ site.author }}, 2022–Present</p>
-      <p class="fs-xs">Last built on
-        <time datetime="{{ buildInfo.time.raw }}">{{ buildInfo.time.formatted }}</time>&nbsp;
-        <span class="nowrap">
-          (<a
-            href="https://www.github.com/{{ site.issues.owner }}/{{ site.issues.repo }}/commit/{{ buildInfo.hash }}"
-            rel="noreferrer noopener"
-            target="_blank">{{ buildInfo.hash | slice: 0, 7 }}</a>)
-        </span>
-      </p>
+      <p class="fs-sm">&copy; {{ site.author }}, {{ buildInfo.time.year }}</p>
     </div>
-    <ul class="page-footer-socials">
-        <li>
-          <a href="/sitemap.xml" class="outline-offset to-underline">
-            Newsletter
-          </a>
-        </li>
-        <li>
-          <a href="/feed.xml" class="outline-offset to-underline">
-            Contact
-          </a>
-        </li>
-    </ul>
   </div>
 </footer>

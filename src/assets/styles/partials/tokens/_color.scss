@@ -18,6 +18,7 @@ html {
     --color-text-inverted: white;
     --color-border: var(--color-surface-4);
     --color-scrollbar-thumb: var(--color-surface-4);
+    --color-mid-text: #585b63;
   }
 
   // Dark theme
@@ -39,5 +40,6 @@ html {
     --color-text-inverted: black;
     --color-border: var(--color-surface-5);
     --color-scrollbar-thumb: var(--color-surface-5);
+    --color-mid-text: #d2d3d7;
   }
 }
