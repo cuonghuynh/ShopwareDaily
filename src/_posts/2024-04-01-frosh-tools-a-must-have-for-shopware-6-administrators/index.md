@@ -60,7 +60,7 @@ http://localhost
 bin/console frosh:monitor <sales-channel-id>
 ```
 
-You can learn more about this package, get full installation instructions, and view the [source code](https://github.com/FriendsOfShopware/FroshTools) on GitHub.
+You can learn more about this plugin, get full installation instructions, and view the [source code](https://github.com/FriendsOfShopware/FroshTools) on GitHub.
 
 
 
