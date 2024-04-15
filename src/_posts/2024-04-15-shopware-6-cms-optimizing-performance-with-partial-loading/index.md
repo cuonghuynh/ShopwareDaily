@@ -31,8 +31,7 @@ Here's a simplified example of a CMS page in JSON format:
 
 ### Why Use Partial Loading?
 
-By default, the API returns the entire HTML content of a CMS page. But what if you only need a specific section, like a product listing or a contact form? Partial loading allows you to target these specific elements, significantly reducing the amount of data transferred. This translates to faster loading times and a smoother user experience for your customers.
-
+In my project, I needed to only display certain CMS elements when users scroll to them. To achieve this, I implemented a JavaScript function that lazy loads the content on scroll events. This helps to reduce the size of the Document Object Model (DOM), leading to improved SEO performance.
 
 ### How Partial Loading Works
 
