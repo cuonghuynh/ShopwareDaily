@@ -2,7 +2,7 @@
 title: "Frosh Tools: A Must-Have for Shopware 6 Administrators"
 description: "Frosh Tools simplifies Shopware 6 administration with system checks, cache management, and log viewers. A valuable plugin for any Shopware 6 admin."
 keywords: ['Shopware 6 Plugin', 'Frosh Tools', 'Shopware 6 Management', 'Shopware 6 Administration Tools']
-categories: [shopware6, shopware6-plugin]
+categories: [shopware6-plugin]
 ---
 
 Running a Shopware 6 store requires constant attention. From system health to background tasks and logs, there's a lot to keep an eye on. That's where [Frosh Tools](https://github.com/FriendsOfShopware/FroshTools) comes in - a free plugin offering a suite of essential functionalities to manage your Shopware 6 shop with ease:
