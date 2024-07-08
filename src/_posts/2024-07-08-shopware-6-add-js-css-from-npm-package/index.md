@@ -6,6 +6,8 @@ categories: [shopware6]
 thumbnail: ./images/simplebar.png
 ---
 
+{% include "postImage.html" src: "./images/simplebar.png", alt: "Simplebar", caption: "Simplebar" %}
+
 [Simplebar](https://www.npmjs.com/package/simplebar) is a customizable scrollbars library that enables developers to create beautiful, cross-browser custom scrollbars with minimal effort. It can enhance the user experience by providing more visually appealing and consistent scrollbars across different browsers.
 
 
