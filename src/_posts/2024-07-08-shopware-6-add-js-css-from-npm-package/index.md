@@ -58,7 +58,7 @@ Create a new plugin js `simplebar.plugin.js` file in `src/plugin/` folder and in
 // <plugin root>/src/Resources/app/storefront/src/plugin/simplebar.plugin.js
 
 import Plugin from 'src/plugin-system/plugin.class';
-import Simplebar from 'simplebar';
+import SimpleBar from 'simplebar';
 
 export default class SimpleBarPlugin extends Plugin {
     init() {
