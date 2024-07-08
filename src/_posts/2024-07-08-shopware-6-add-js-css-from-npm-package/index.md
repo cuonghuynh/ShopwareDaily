@@ -92,4 +92,4 @@ By following these steps, you've successfully integrated the [Simplebar](https:/
 
 Ref:
 - https://www.npmjs.com/package/simplebar
-- https://developer.shopware.com/docs/v6.3/guides/plugins/plugins/plugin-fundamentals/using-npm-dependencies.html
+- https://developer.shopware.com/docs/v6.5/guides/plugins/plugins/plugin-fundamentals/using-npm-dependencies.html
